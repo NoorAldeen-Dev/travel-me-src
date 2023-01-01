@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@font-face {
+    font-family: "noorfont";
+    src:  url(../fonts/Cairo-SemiBold.ttf) ;
+}
+$font-brand:"Rakkas" ,"Helvetica Neue", "Segoe UI" ,sans-serif;
+$font-content:"noorfont" ,"Helvetica Neue", "Segoe UI" ,sans-serif; 
+
+$color-brand:white;
+$color-content:#94d12a;
+$color-button:#1d4576;
+$background-header:rgb(43, 103, 177);
+$color-background:#f9f8f8;
+$color-accordion:#22c0e8;
+
+@mixin tr-btn {
+    padding: 6px 30px;
+    background-color: $color-content;
+    color: $color-brand;
+    transition: all 0.5s ease;
+    border: none;
+    &:hover{
+        background-color: $color-brand;
+        color: $color-content;
+    }
+}

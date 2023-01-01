@@ -1,0 +1,557 @@
+@import "_varublas";
+@import "istanbul-vacation";
+@import "egypt-vacation";
+@import "log-in";
+@import "sing-up";
+
+body{
+    font-family: $font-content;
+}
+/**************************************************
+Header Style
+***************************************************/
+.tr-header__body{
+    background: url("../images/bg1.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-color: $background-header;
+    padding: 80px 55px 20px;
+}
+    .tr-navbar__scroll
+    {
+        background-color: $background-header;
+    }
+    .tr-navbar {
+        .tr-brand{
+            display: flex;
+            align-items: center;
+            color: $color-brand;
+            &:hover{
+                color: $color-brand;
+            }
+            img{
+                transform: rotate(-135deg);
+            }
+            span{
+                margin-right: 15px;
+                font-family: $font-brand;
+                font-size: 40px;
+                margin-top: 10px;
+            }
+        }
+        .navbar-toggler{
+            border: none;
+            color: #000;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .nav-link{
+            color: $color-brand;
+            padding: 10px 20px !important;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: all 0.5s ease;
+            &.active
+                     
+            {
+                @include tr-btn;
+                box-shadow: -3px 6px 10px -3px #000;
+            }
+            &:hover            
+            {
+                color: $color-content;
+                background-color: $color-brand;
+            }
+
+        }
+        
+    }
+
+.tr-header-socail{
+    i{
+        font-size: 25px;
+        color: $color-button;
+        background-color: $color-brand;
+        line-height: 45px;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        text-align: center;
+        &:hover{
+            color: $color-content;
+        }
+    }
+  }
+.tr-header__body{
+    .col-lg-7{
+        width: inherit;
+        margin-right: auto;
+        margin-left: 35px;
+        margin-top: 35px;
+    }
+    .tr-header__img{
+        position: relative;  
+        height: 500[x];     
+        
+        &>img{
+            height: 500px;
+            border: 3px solid $color-brand;
+            box-shadow: 5px 5px 15px 0px #000;
+            
+        }
+        .tr-cloud1{
+            img{
+                width: 300px;
+                position: absolute;
+                left: 9%;
+                top: 10px;
+                transform: translateX(-50%) ;
+                
+            }
+        }
+        
+        .tr-cloud2{
+            img{
+                width: 300px;
+                position: absolute;
+                left: 9%;
+                bottom:10px;
+                transform: translateX(-50%) ;
+            }
+        }
+        .tr-airplane{
+            img{
+                width: 300px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(50% , -50%);
+                
+            }
+        }
+        .tr-cloud3{
+            img{
+                width: 400px;
+                position: absolute;
+                right: -25px;
+                top: 52%;
+                transform: translate(50% , -50%);
+            }
+        }
+    }
+    
+    .tr-header__title{
+        color: $color-brand;        
+        font-size: 40px;
+        line-height: 2;
+        span{
+            color: $color-content;
+            font-weight: bold;
+        }
+    }    
+    .tr-header__btn{
+        a{
+            background-color: $color-brand;
+            margin-left: 10px;
+            font-weight: bold;
+            &:hover{
+                color: $color-content;
+            }
+           
+        }
+        .tr-header__btn-contact{  
+            @include tr-btn;                     
+            i{
+                margin-left: 10px;
+            }
+        }        
+    }
+    .tr-header_aboutus{
+        .tr-header-p{
+        p{
+            font-size: 18px;
+            color: $color-brand;
+            margin-top: 30px;
+            line-height: 2;
+        }
+    }
+    
+    }
+}
+
+/************************************
+*************************************
+Services Style
+**************************************
+*************************************/
+section#services{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: $color-background;
+    .tr-services__header{
+        margin-bottom: 50px;
+        font-size: 40px;
+
+    }
+    .tr-service{
+        height: 425px;
+        padding: 50px;
+        border: 2px solid #c9c9c9;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        .tr-services__title{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: $font-brand;
+            color: $color-content;
+            font-size: 35px;
+            
+        }
+        .tr-services__desc{
+            font-size: 18px;
+            line-height: 1.7;
+            
+        }
+    }
+}
+/************************************
+*************************************
+Vacation Style
+**************************************
+*************************************/
+section#vacations{
+    background: url("../images/bg2.jpg") no-repeat top;
+    background-size: cover;
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+    .tr-vacations__header{
+        margin: 0;
+        padding-bottom: 50px;
+        font-size: 55px;
+        color: $color-brand;
+        font-family: $font-brand;
+    }
+    .tr-vactions__card {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            .tr-vacation__btn-more{
+                opacity: 1;
+            }
+        }
+        img{
+            border-radius: 10px;
+            width: 100%;
+        }
+        .tr-vacations__card-title{
+            color: $color-brand;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        .tr-vacations__price{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color-content;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: $color-brand;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        .tr-vacation__btn-more{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            @include tr-btn;
+            font-size: 20px;
+            padding: 10px 20px;
+            opacity: 0;
+            
+
+        }
+    }
+}
+/************************************
+*************************************
+Contact Style
+**************************************
+*************************************/
+section#contact{
+    padding: 100px 0;
+    background-color: $color-background;
+    .tr-contact__map{
+        width: 90%;
+        height: 250px;
+    }
+    .tr-contact__information{
+        .tr-contact__titie{
+            color: $background-header;
+        }
+        ul{
+            padding-right: 0;
+            li{
+                list-style-type: none;
+                margin: 25px 0;
+                i{
+                    color: $color-content;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+/************************************
+*************************************
+Footer Style
+**************************************
+*************************************/
+footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $color-button;
+
+    .tr-footer-copy-right{
+        color: $color-brand;
+        
+    }
+}
+
+
+
+/*************************************
+Medai style
+**************************************/
+@media (max-width:1199.98px){
+    .navbar-expand-xl{
+        background-color: $background-header;
+        .navbar-nav{
+            margin-top: 20px;
+        }
+    }
+    .tr-header__body{
+        .col-lg-7{
+            margin-left: 0;
+            .tr-header__img{
+                margin-left: 0 ;
+                &>img{
+                    height: 400px ;
+                }
+                .tr-cloud1{
+                    img{
+                        width: 200px ;                
+                    }
+                }
+                
+                .tr-cloud2{
+                    img{
+                        width: 200px ;
+                    }
+                }
+                .tr-airplane{
+                    img{
+                        width: 200px ;
+                        top: 48%;
+                    }
+                }
+                .tr-cloud3{
+                    img{
+                        width: 300px ;
+                        top: 48%;
+                    }
+                }
+            }
+        }
+        .tr-header-p{
+            p{
+                line-height: 1.7;
+            }
+        }
+    }
+
+    
+    
+}
+@media (max-width:991.98px){
+    .tr-navbar{
+        .navbar-nav{
+            .nav-item{
+                margin-top: 10px;
+            }
+            .nav-link{
+                display: inline-flex;
+            }
+        }
+    }
+    .tr-header__body{
+        .col-lg-7{
+            margin-top: 30px;
+            margin-left: auto;
+            .tr-header__img{
+                
+                &>img{
+                    max-height: 450px;
+                }
+            }            
+        }
+        .tr-header__title{
+            text-align: center;
+        }
+        .tr-header__btn{
+            text-align: center;
+        }
+        .tr-header-p{
+            p{
+                margin-top: 75px;
+                text-align: center;
+            }
+        }
+        .tr-header-socail{
+            text-align: center;
+            margin-top: 40px;
+            
+        }
+    }
+
+    section#services{
+        .tr-service{
+            height: 500px;
+        }
+    }
+
+    section#vacations{
+        .tr-vactions__card{
+            .tr-vacation__btn-more{
+                opacity: 1;
+                transform: none;
+                right: auto;
+                top: auto;
+                left: 15px;
+                bottom: 20px;
+            }
+        }
+    }
+    section#contact{
+        .tr-contact__information{
+            margin-top: 25px;
+        }
+        .tr-contact__map{
+            width: 100%;
+        }
+    }
+    
+}
+@media (max-width:767.98px){
+    .tr-header__body{
+        .col-lg-7{           
+            .tr-header__img{
+                
+                &>img{
+                    max-height: 350px;
+                }
+            }  
+            .tr-airplane{
+                img{
+                    right: 65px;
+                }
+            }    
+            .tr-cloud3{
+                img{
+                    right: 50px;
+                }
+            }      
+        }        
+    }
+    section#services{
+        .tr-service{
+            height: auto;
+        }
+    }
+
+    section#vacations{
+        .tr-vactions__card{
+            .tr-vacation__btn-more{
+                right: 10px;
+                top: 10px;
+                left: auto;
+                bottom: auto;
+                font-size: 18px;
+            }
+        }
+    }
+    footer{
+        text-align: center;
+        .tr-footer-copy-right{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width:575.98px){
+    .tr-header__body{
+        padding: 15px ;
+    }
+    .tr-header__body{
+        .col-lg-7{
+            .tr-header__img{
+                
+                &>img{
+                    max-height: 200px;
+                }
+                .tr-cloud1{
+                    img{
+                        display: none;               
+                    }
+                }
+                
+                .tr-cloud2{
+                    img{
+                        display: none
+                    }
+                }
+                .tr-airplane{
+                    img{
+                        width: 150px;
+                        right: 50%;
+                        top: 0;
+                    }
+                    } 
+                    .tr-cloud3{
+                        img{
+                            width: 250px;
+                            right: 50%;
+                            top:12px;
+                        }
+                    } 
+                
+            }     
+        }  
+        .tr-header__title{
+            margin-top: 80px;
+        }      
+    }
+
+    section#vacations{
+        .tr-vactions__card{
+            .tr-vacation__btn-more{                
+                font-size: 14px;
+            }
+            .tr-vacations__card-title{
+                font-size: 18px;
+            }
+        }
+    }  
+}
+

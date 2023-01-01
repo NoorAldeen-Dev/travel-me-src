@@ -1,0 +1,313 @@
+/*************************************
+Header style
+**************************************/
+.tr-vacation__header--top{
+    background: url("../images/istanbul.jpg") no-repeat center;
+    background-size: cover;
+    height: 500px;
+    box-shadow: 0 0 40px 7px black;
+    position: relative;
+    
+    .tr-vacation__header--images{
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50% ,50%);
+        width:100%;
+        text-align: center;
+        .tr-vacation__header--image{
+            position: relative;
+            display: inline-block;
+            &:not(:last-child){
+                margin-left: 50px;
+            }
+        }
+        
+        .tr-vacation__headeer--img{
+            width: 220px;
+            height: 220px;
+            border: 4px solid $color-brand;
+            box-shadow: 0px 10px 50px -10px black;
+            
+        }
+        .tr-vacation__header--map{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-55% ,-90%);
+        }
+        .tr-vacation__header--airplane{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50% ,-50%);
+        }
+    }
+}
+.tr-vacation__header--bottom{
+    .tr-vacation__header--title{
+        margin-top: 100px;
+        color: $color-content;
+        font-size: 50px;
+        line-height: 1.7;
+        span{
+            color: $color-brand;
+            font-family: $font-brand;
+        }
+    }
+    .tr-vacation__header--desc{
+        color: $color-brand;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        line-height: 2  ;
+        font-weight: bold  ;
+    }
+    
+}
+/*************************************
+Gallery style
+**************************************/
+
+section#tr-vacation-gallery{
+    padding: 50px 0 100px;
+    background-color: $color-background;
+    .tr-vacation-gallery__title{
+        margin-bottom: 50px;
+        font-family: $font-brand;
+        font-size: 40px;
+    }
+    .tr-vacation-gallery--card{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            img{
+                scale: 1.2;
+            }
+            .tr-vacation-gallery__body{
+                .card-title{
+                    color: $color-content;
+                    background-color: $color-brand;
+                }
+            }
+        }
+        img{
+            transition: all 1s ease;
+            height: 100%;
+            width: fit-content;
+            position: relative;
+            
+                        
+        }
+        .tr-vacation-gallery__body{
+            top: auto;
+            .card-title{
+                color: $color-background;
+                background-color: $color-content;
+                padding: 10px 0;
+                text-align: center;
+                transition: all 1s ease;
+            }
+        }
+    }    
+}
+/*************************************
+Modal style
+**************************************/
+
+.tr-vacation-modal-dialog{
+    .modal-title{
+        font-size: 25px !important;
+        color: $color-button;
+    }
+    .modal-body{
+        font-size: 20px;
+        line-height: 1.7;
+    }
+}
+
+/*************************************
+Plan style
+**************************************/
+section#tr-vacation-plan{
+    padding: 50px 0 100px;
+    .tr-vacation-plan__heading{
+        margin-bottom: 50px;
+    }
+    .tr-vacation-plan__card{
+        border: 2px solid #d4d9df;
+            padding: 40px;
+        ul.timeline {
+            
+            list-style-type: none;
+            position: relative;
+            .tr-vacation-plan-day{
+                color: $color-button;
+                
+            }
+        }
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            right: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+        ul.timeline > li {
+            padding-right: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            &:not(:last-child){
+                .accordion-button{
+                    border-bottom: 1px solid #d4d9df;
+                }
+            }
+            .accordion-button{
+                color: $color-content !important ;
+                font-weight: bold;
+                box-shadow: none !important;
+                line-height: 1.7;
+                
+            }
+            .accordion-button:after{
+                background-size: 16px;
+            }
+            .accordion-button:not(.collapsed){
+                background-color: transparent;
+
+            }
+        }
+        ul.timeline > li.active:before{
+            content: ' ';
+            background: $color-accordion;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid $color-accordion;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+        ul.timeline > li:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid $color-accordion;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+        .tr-vacation-plan__price{
+            border-top: 2px solid #d4d9df;
+            padding-top: 25px;
+            text-align: center;
+            p{
+                font-size: 15px;
+            
+            }
+            h3{
+                color: $color-content;
+                font-family: $font-brand;
+            }
+            .tr-vacation__plan--btn{
+                @include tr-btn;
+                font-size: 20px;
+                &:hover{
+                    background-color: $color-accordion;
+                    color:$color-brand;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*************************************
+Medai style
+**************************************/
+@media (max-width:1199.98px){
+    .tr-vacation-gallery--card{
+        width: 80% !important;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width:991.98px){
+    .tr-vacation-gallery--card{
+        width: 60%!important;
+    }
+}
+@media (max-width:767.98px){
+    .tr-vacation__header--image{
+        &:not(:last-child){
+            margin-left: 10px !important;
+        }
+    }
+    .tr-vacation__headeer--img{
+        width: 180px !important;
+        height: 180px !important;
+    }
+    .tr-vacation__header--desc{
+        width: 90% !important;
+    }
+    .tr-vacation__header--title{
+        font-size: 40px!important;
+    }
+}
+@media (max-width:575.98px){
+    .tr-vacation__headeer--img{
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .tr-vacation__header--map{
+        display: none;
+    }
+    .tr-vacation__header--airplane{
+        top: -50% !important;
+    }
+    .tr-vacation__header--desc{
+        font-size: 14px;
+    }
+    .tr-vacation__header--title{
+        font-size: 30px!important;
+    }
+    .tr-vacation-gallery--card{
+        height: 350px !important;
+        width: 300px !important;
+    }
+    .tr-vacation-modal-dialog{
+        .modal-body{
+            font-size: 18px;
+        }
+    }
+    .tr-vacation-plan__card{
+        border: none !important;
+        padding: 10px !important;
+        .tr-vacation-plan__heading{
+            text-align: center;
+        }
+        .accordion-button{
+            font-size: 14px;
+        }
+        
+    }
+}
+
+@media (max-width:400px){
+    .tr-vacation__headeer--img{
+        width: 100px !important;
+        height: 100px !important;
+    }
+}

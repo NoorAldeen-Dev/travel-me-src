@@ -1,0 +1,19 @@
+.tr-sing-up__form{
+    width: 650px !important;
+    margin-right: 30px;
+    margin-left: 30px;
+    .tr-sing-up__label{
+        font-size: 20px !important;
+    }
+    
+}
+
+@media (max-width:575.98px){
+    .tr-sing-up{
+        height: 130vh;
+        .tr-sing-up__form{
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+}

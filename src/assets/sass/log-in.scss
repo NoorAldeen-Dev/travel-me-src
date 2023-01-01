@@ -1,0 +1,66 @@
+.tr-log-in{
+    background: url("../images/bg1.png") no-repeat center;
+    background-size: cover;
+    background-color: $background-header;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tr-log-in__form{
+        width: 475px;
+        padding:20px 30px 30px;
+        background-color: $color-content;
+        border-radius: 10px;
+        h3{
+            color: $background-header;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .tr-log-in__label{
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: $color-brand;
+            font-family: $font-brand;
+
+        }
+        .tr-log-in__input{
+            box-shadow: none;
+            font-family: $font-brand;
+            direction: rtl !important;
+        }
+        .tr-log-in-forget{
+            text-decoration: none;
+            float: right;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .tr-log-in__btn{
+            background-color: $background-header;
+            float: left;
+            color: white;
+            padding: 10px 15px;
+            margin-left: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: white;
+                color: $background-header;
+            }
+        }
+    }    
+}
+
+@media (max-width:575.98px){
+    .tr-log-in__form{
+        width: 400px !important;
+        padding:20px 20px 30px !important;
+        border-radius: 0 !important;
+    }
+    .tr-log-in-forget{
+        font-size: 14px!important;
+    }
+    .tr-log-in__btn{
+        font-size: 14px !important;
+    }
+}
